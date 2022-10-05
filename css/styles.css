@@ -125,6 +125,7 @@ ul {
 .link {
     display: flex;
     position: relative;
+    transition: 250ms var(--animation-timing);
     /* padding-top: 6px; */
     
 
@@ -147,9 +148,6 @@ ul {
 }
 .link:hover::after {
     opacity: 1;
-}
-.current {
-    color: red;
 }
 
 .site-nav .link {
@@ -875,12 +873,12 @@ color: var(--primary-gray-text);
 .social-list-link:hover .icon-team,
 .social-list-link:focus .icon-team {
     fill: var(--primary-white-color);
-    transition: 250ms var(--animation-timing);
 }
 
 
 .icon-team {
     fill: var(--border-logo);
+    transition: 250ms var(--animation-timing);
 }
 
 .icon-team:hover {
@@ -935,13 +933,14 @@ color: var(--primary-gray-text);
     padding: 15px 32px;
     border: 1px solid var(--border-color);
     border-radius: 4px;
+    transition: 250ms var(--animation-timing);
     
  }
 
  .cards-link:hover,
  .cards-link:focus {
     border-color: #2196F3;
-    transition: 250ms var(--animation-timing);
+    
  }
 
  .cards-link:hover .client-logo,
