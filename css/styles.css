@@ -137,7 +137,6 @@ ul {
     width: 100%;
     height: 4px;
     background-color: var(--logo-color);
-    opacity: 1;
     transition: opacity 250ms var(--animation-timing);
     border-radius: 2px;
     
