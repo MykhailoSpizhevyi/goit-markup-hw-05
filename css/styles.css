@@ -17,6 +17,10 @@
     --card-bottom-background: rgba(47, 48, 58, 0.8);
     --overlay-card-blue: rgba(33, 150, 243, 0.9);
     --cards-text-color:rgba(117, 117, 117, 1);
+    --border-color-modal:rgba(33, 33, 33, 0.2);
+    --modal-icon-color: rgba(33, 33, 33, 1);
+
+
 }
 html {
     box-sizing: border-box;
@@ -412,9 +416,17 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     background-color: transparent;
     padding: 0;
     transition: 250ms;
-    
-    
-    
+}
+
+/* .modal-form { */
+    /* display: flex; */
+    /* flex-direction: column; */
+/* } */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    /* padding: 40px; */
 }
 
 .modal-close-btn:hover,
@@ -434,7 +446,6 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
 .contact-data {
     text-align: center;
-    margin-top: 40px;
     margin-bottom: 30px;
     font-weight: 700;
     font-size: 20px;
@@ -444,19 +455,71 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .contact-form-input{
-    width: 100%;
+    width: 482px;
     height: 40px;
+    padding-left: 42px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: 250ms var(--animation-timing);
+}
+
+.contact-form-input:focus {
+    outline: none;
+    border-color: var(--logo-color);
+}
+
+.contact-form-input:focus + .modal-form-icon {
+    fill: var(--logo-color);
+}
+
+.modal-form-input-wrapper{
+    display: block;
+    position: relative;
     margin-bottom: 20px;
-    padding-left: 20px;
+}
+
+.modal-form-icon {
+    fill: var(--modal-icon-color);
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    transition: 250ms var(--animation-timing);
     
 }
 
 .contact-form-message{
-    width: 100%;
+    width: 494px;
     height: 120px;
     padding: 12px 16px;
     margin-bottom: 20px;
     resize: none;
+    border-color: var(--border-color-modal);
+    border-radius: 4px;
+}
+
+.contact-form-message:focus {
+    outline: none;
+    border-color: var(--logo-color);
+}
+
+.contact-form-message::placeholder{
+    color:rgba(117, 117, 117, 0.5);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+}
+
+.modal-form-desc {
+display: block;
+font-family: inherit;
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 1.16;
+letter-spacing: 0.01em;
+color: var(--primary-gray-text);
 }
 
 .contact-form-field{
